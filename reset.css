@@ -1,0 +1,102 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+:root {
+  --reset-margin: 0;
+  --reset-padding: 0;
+  --reset-border: 0;
+  --reset-font: inherit;
+  --reset-font-size: 100%;
+  --reset-vertical-align: baseline;
+}
+
+html , body , div , span , applet , object , iframe , h1 , h2 , h3 , h4 , h5 , h6 , p {
+  margin: var(--reset-margin);
+  padding: var(--reset-padding);
+  border: var(--reset-border);
+  font: var(--reset-font);
+  font-size: var(--reset-font-size);
+  vertical-align: var(--reset-vertical-align);
+}
+
+blockquote , pre , a , abbr , acronym , address , big , cite , code , del , dfn , em {
+  margin: var(--reset-margin);
+  padding: var(--reset-padding);
+  border: var(--reset-border);
+  font: var(--reset-font);
+  font-size: var(--reset-font-size);
+  vertical-align: var(--reset-vertical-align);
+}
+
+img , ins , kbd , q , s , samp , small , strike , strong , sub , sup , tt , var , b {
+  margin: var(--reset-margin);
+  padding: var(--reset-padding);
+  border: var(--reset-border);
+  font: var(--reset-font);
+  font-size: var(--reset-font-size);
+  vertical-align: var(--reset-vertical-align);
+}
+
+u , i , center , dl , dt , dd , ol , ul , li , fieldset , form , label , legend {
+  margin: var(--reset-margin);
+  padding: var(--reset-padding);
+  border: var(--reset-border);
+  font: var(--reset-font);
+  font-size: var(--reset-font-size);
+  vertical-align: var(--reset-vertical-align);
+}
+
+caption , tbody , tfoot , thead , tr , th , td , article , aside , canvas , details {
+  margin: var(--reset-margin);
+  padding: var(--reset-padding);
+  border: var(--reset-border);
+  font: var(--reset-font);
+  font-size: var(--reset-font-size);
+  vertical-align: var(--reset-vertical-align);
+}
+
+figure , figcaption , footer , header , hgroup , menu , nav , output , ruby , section {
+  margin: var(--reset-margin);
+  padding: var(--reset-padding);
+  border: var(--reset-border);
+  font: var(--reset-font);
+  font-size: var(--reset-font-size);
+  vertical-align: var(--reset-vertical-align);
+}
+
+table , embed , time , mark , audio , video {
+  margin: var(--reset-margin);
+  padding: var(--reset-padding);
+  border: var(--reset-border);
+  font: var(--reset-font);
+  font-size: var(--reset-font-size);
+  vertical-align: var(--reset-vertical-align);
+}
+
+/* HTML5 display-role reset for older browsers */
+article , aside , details , figcaption , figure {
+  display: block;
+}
+
+footer , header , hgroup , menu , nav , section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol , ul {
+  list-style: none;
+}
+
+blockquote , q {
+  quotes: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

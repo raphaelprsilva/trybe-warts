@@ -1,171 +1,327 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .header {
-  display: flex;
+  align-items: center;
   background-color: rgb(50, 167, 145);
+  display: flex;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
-  height: 65px;
+  height: 7.5rem;
+  padding-top: 0.5rem;
 }
 
-#trybewarts-header-title {
-  padding: 1rem;
-  color: white;
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.trybewarts-header-title {
+  display: none;
+}
+
+.trybewarts-header-logo {
+  width: 50px;
+  padding: 0.5rem;
 }
 
 .trybewarts-login {
   display: flex;
-  padding: 1rem;
-  width: 33%;
-  justify-content: space-between;
-}
-
-#login , #senha , #enviar {
-  padding: 0.3rem;
-}
-
-.conteudo {
-  display: flex;
-  justify-content: space-around;
-  padding: 4rem 0;
-  background-color: rgb(168, 156, 156);
-}
-
-#evaluation-form {
-  display: flex;
-  width: 675px;
   flex-direction: column;
-  padding: 2rem 1.5rem;
-  background-color: rgb(235, 225, 225);
-  border: 1px solid rgb(29, 28, 28);
-  border-radius: 0.5rem;
+  width: 60%;
 }
 
-#trybewarts-forms-logo {
-  height: 500px;
+.trybewarts-login-email , .trybewarts-login-senha , .input-name
+, .input-lastname , .input-email {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0.35rem;
+  margin-bottom: 0.5rem;
 }
 
-.container-row-one {
-  display: flex;
-  padding: 0.5rem;
-  justify-content: space-evenly;
-  align-items: center;
+.trybewarts-login-entrar {
+  background-color: #267e6e;
+  border: none;
+  border-radius: 4px;
+  color: #fdfdfd;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.container-row-two {
-  display: flex;
-  padding: 0.5rem;
-  width: 80%;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.caixa {
-  display: flex;
-}
-
-.caixa-lista {
+.main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 2rem 0;
-  width: 50%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 
-.caixa-lista label {
-  text-align : center;
-}
-
-.caixa-lista-itens {
+.evaluation-form {
+  background-color: #91ded0;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height: 80%;
-  justify-content: space-around;
-  padding: 0.5rem;
-}
-
-.caixa-lista-checkbox {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.5rem 0;
   justify-content: center;
+  padding: 0.75rem 0.5rem;
 }
 
-.caixa-lista-checkbox-list {
-  padding: 0.5rem;
-}
-
-.caixa-avaliacao {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 16px;
-}
-
-.caixa-avaliacao-radio {
-  display: flex;
-  flex-direction: row;
-}
-
-.caixa-avaliacao-radio label {
-  padding: 0 0.3rem;
-}
-
-.caixa-comentario {
+.select-container {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
 }
 
-.caixa-comentario label {
-  padding: 1rem 0;
+.evaluation-form-label {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.caixa-comentario-contador {
+.evaluation-form-select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.trybewarts-forms-logo {
+  display: none;
+}
+
+.family,
+.learn,
+.evaluation {
+  background-color: #91ded0;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
   display: flex;
-  padding: 0.5rem 0;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
+  margin-top: 0.75rem;
 }
 
-#textarea {
-  padding: 0.7rem;
-  border-radius: 0.4rem;
+.comments {
+  background-color: #91ded0;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.counter {
+  padding-top: 0.5rem;
+  color: rgb(104, 104, 104);
+}
+
+.family-paragraph,
+.learn-paragraph,
+.evaluation-paragraph,
+.comments-paragraph,
+.comments-label {
+  padding: 0.5rem 0;
+}
+
+.family-labels,
+.learn-labels,
+.evaluation-labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.family-label,
+.learn-label,
+.evaluation-label {
+  color: white;
+  background-color: #43c7ae;
+  border-radius: 5px;
+  margin: 0.25rem 0;
+  padding: 0.25rem;
+}
+
+.family-label:hover,
+.learn-label:hover,
+.evaluation-label:hover {
+  background-color: #d0f1eb;
+  color: #174f44;
+  transition: 0.4s;
+}
+
+.comments-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-textarea {
+  background-color: #EFFAF8;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  padding: 0.75rem;
   resize: none;
 }
 
-.caixa-termos {
-  display: flex;
+.accord, .submit {
   align-items: center;
-  justify-content: center;
-}
-
-.caixa-termos label {
-  padding: 0.4rem 0.9rem;
-}
-
-.caixa-enviar {
   display: flex;
-  flex-wrap: wrap;
-  padding: 1rem 0.4rem;
-  justify-content: stretch;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
 }
 
-#submit-btn {
-  width: 100%;
-  padding: 0.4rem;
+.agreement-infos {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  width: 80%;
+}
+
+.submit-btn {
+  background-color: #267e6e;
+  border: none;
+  border-radius: 4px;
+  color: #fdfdfd;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  transition: 0.4s;
+}
+
+.disabled {
+  background-color: rgb(97, 100, 100);
+}
+
+.footer {
   background-color: rgb(50, 167, 145);
   color: white;
-  font-size: 1.2rem;
-  border-radius: 0.4rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
 }
 
-.rodape {
-  text-align: center;
-  padding: 1rem;
-  color: white;
-  background-color: rgb(29, 28, 28);
+@media screen and (min-width: 768px) {
+  .trybewarts-header-title {
+    color: #fdfdfd;
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  .trybewarts-login {
+    width: 50%;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .content-wrapper {
+    width: 30rem;
+  }
+
+  .trybewarts-forms-logo {
+    display: inline-block;
+    height: 300px;
+  }
+
+  .evaluation-form {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 7.5rem;
+    justify-content: flex-start;
+  }
+
+  .input-name,
+  .input-lastname,
+  .input-email {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0.35rem;
+    margin: 0.5rem;
+  }
+
+  .evaluation-form-label {
+    margin-bottom: 0.125rem;
+    margin-top: 0;
+  }
+
+  .select-container {
+    margin-left: 0.7rem;
+    width: 10rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 5.5rem;
+  }
+
+  .trybewarts-login {
+    flex-direction: row;
+  }
+
+  .trybewarts-login-email,
+  .trybewarts-login-senha {
+    margin-right: 0.5rem;
+  }
+
+  .main-content {
+    align-items: initial;
+    justify-content: space-between;
+  }
+
+  .content-wrapper {
+    width: 34rem;
+  }
+
+  .input-name, .input-lastname , .input-email {
+    width: 45%;
+  }
+
+  .trybewarts-forms-logo {
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .content-wrapper {
+    width: 675px;
+  }
+
+  .main-content {
+    justify-content: space-around;
+  }
+
+  .family-learn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .family , .learn {
+    width: 46%;
+  }
+
+  .learn-labels {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .learn-label {
+    box-sizing: border-box;
+    margin-right: 0.25rem;
+    padding: 0.6rem;
+  }
+
+  .evaluation-labels {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .evaluation-label {
+    padding: 0.6rem;
+  }
+
+  .agreement-infos {
+    width: 55%;
+  }
 }
