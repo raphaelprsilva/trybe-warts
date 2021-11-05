@@ -6,6 +6,9 @@ const commentsTextArea = document.querySelector('[data-js="comments-textarea"]')
 const charactersCount = document.querySelector('[data-js="counter"]');
 const radioFamilyItems = document.querySelectorAll('[data-js="radio-family"]');
 const contentToLearn = document.querySelectorAll('[data-js="learn-input"]');
+const ratingItems = document.querySelectorAll('[data-js="evaluation-input"]');
+const mainContent = document.querySelector('[data-js="main-content"]');
+const report = document.querySelector('[data-js="report"]');
 
 const defaultEmail = 'tryber@teste.com';
 const defaultPassword = '123456';
@@ -42,27 +45,37 @@ commentsTextArea.addEventListener('input', (event) => {
   charactersCount.textContent = maxCommentsCharactersAllowed - commentsLength;
 });
 
+const generateReport = (userInfos) => {
+  const [userFirstName, userLastName, userEmail, selectedHouse,
+    familyOption, learnedTechs, rating, comments] = userInfos;
+
+  report.innerHTML = `
+  <h2>Relatório</h2>
+  <p>Nome: ${userFirstName} ${userLastName}</p>
+  <p>Email: ${userEmail}</p>
+  <p>Casa: ${selectedHouse}</p>
+  <p>Família: ${familyOption}</p>
+  <p>Matérias: ${learnedTechs}</p>
+  <p>Avaliação: ${rating}</p>
+  <p>Obervações: ${comments}</p>
+`;
+};
+
 submitButton.addEventListener('click', () => {
   const userFirstName = evaluationForm.inputName.value;
   const userLastName = evaluationForm.inputLastname.value;
   const userEmail = evaluationForm.email.value;
-
   const userHouseOptions = evaluationForm.house.options;
   const userHouseSelectedIndex = userHouseOptions.selectedIndex;
   const selectedHouse = userHouseOptions[userHouseSelectedIndex].value;
+  const familyOption = [...radioFamilyItems].filter((element) => element.checked)[0].value;
+  const learnedTechs = [...contentToLearn].filter((element) => element.checked)
+    .map(({ value }) => value);
+  const rating = [...ratingItems].filter((element) => element.checked)[0].value;
+  const comments = commentsTextArea.value;
+  const userInfos = [userFirstName, userLastName, userEmail, selectedHouse,
+    familyOption, learnedTechs, rating, comments];
 
-  let familyOption = '';
-
-  for (let index = 0; index < radioFamilyItems.length; index += 1) {
-    const isCurrentItemChecked = radioFamilyItems[index].checked;
-    if (isCurrentItemChecked) {
-      familyOption = radioFamilyItems[index].value;
-    }
-  }
-
-  console.log(familyOption);
-
-  console.log([...contentToLearn].filter((element) => element.checked).map(({ value }) => value));
+  mainContent.style.display = 'none';
+  generateReport(userInfos);
 });
-
-console.log(contentToLearn);

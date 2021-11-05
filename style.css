@@ -27,9 +27,16 @@
   width: 60%;
 }
 
-.trybewarts-login-email , .trybewarts-login-senha , .input-name
-, .input-lastname , .input-email {
-  border: 1px solid #ccc;
+.trybewarts-login-email , .trybewarts-login-senha {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-name , .input-lastname , .input-email {
+  border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
   box-sizing: border-box;
   padding: 0.35rem;
@@ -37,10 +44,10 @@
 }
 
 .trybewarts-login-entrar {
-  background-color: #267e6e;
+  background-color: rgb(38, 126, 110);
   border: none;
   border-radius: 4px;
-  color: #fdfdfd;
+  color: rgb(253, 253, 253);
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
 }
@@ -53,8 +60,8 @@
 }
 
 .evaluation-form {
-  background-color: #91ded0;
-  border: 1px solid #cdcdcd;
+  background-color: rgb(145, 222, 208);
+  border: 1px solid rgb(205, 205, 205);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -73,7 +80,7 @@
 }
 
 .evaluation-form-select {
-  border: 1px solid #ccc;
+  border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
   box-sizing: border-box;
   padding: 0.35rem;
@@ -84,11 +91,9 @@
   display: none;
 }
 
-.family,
-.learn,
-.evaluation {
-  background-color: #91ded0;
-  border: 1px solid #cdcdcd;
+.family , .learn , .evaluation {
+  background-color: rgb(145, 222, 208);
+  border: 1px solid rgb(205, 205, 205);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -98,13 +103,13 @@
 }
 
 .comments {
-  background-color: #91ded0;
-  border: 1px solid #cdcdcd;
+  background-color: rgb(145, 222, 208);
+  border: 1px solid rgb(205, 205, 205);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.75rem 0.5rem 0.5rem;
   margin-top: 0.75rem;
 }
 
@@ -113,36 +118,30 @@
   color: rgb(104, 104, 104);
 }
 
-.family-paragraph,
-.learn-paragraph,
-.evaluation-paragraph,
-.comments-paragraph,
-.comments-label {
+.family-paragraph , .learn-paragraph {
   padding: 0.5rem 0;
 }
 
-.family-labels,
-.learn-labels,
-.evaluation-labels {
+.evaluation-paragraph , .comments-paragraph , .comments-label {
+  padding: 0.5rem 0;
+}
+
+.family-labels , .learn-labels , .evaluation-labels {
   display: flex;
   flex-direction: column;
 }
 
-.family-label,
-.learn-label,
-.evaluation-label {
+.family-label , .learn-label , .evaluation-label {
   color: white;
-  background-color: #43c7ae;
+  background-color: rgb(67, 199, 174);
   border-radius: 5px;
   margin: 0.25rem 0;
   padding: 0.25rem;
 }
 
-.family-label:hover,
-.learn-label:hover,
-.evaluation-label:hover {
-  background-color: #d0f1eb;
-  color: #174f44;
+.family-label:hover , .learn-label:hover , .evaluation-label:hover {
+  background-color: rgb(208, 241, 235);
+  color: rgb(23, 79, 68);
   transition: 0.4s;
 }
 
@@ -152,14 +151,14 @@
 }
 
 .comments-textarea {
-  background-color: #EFFAF8;
-  border: 1px solid #cdcdcd;
+  background-color: rgb(239, 250, 248);
+  border: 1px solid rgb(205, 205, 205);
   border-radius: 5px;
   padding: 0.75rem;
   resize: none;
 }
 
-.accord, .submit {
+.accord , .submit {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -173,10 +172,10 @@
 }
 
 .submit-btn {
-  background-color: #267e6e;
+  background-color: rgb(38, 126, 110);
   border: none;
   border-radius: 4px;
-  color: #fdfdfd;
+  color: rgb(253, 253, 253);
   cursor: pointer;
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
@@ -197,9 +196,10 @@
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and ( min-width : 768px ) {
+
   .trybewarts-header-title {
-    color: #fdfdfd;
+    color: rgb(253, 253, 253);
     display: inline-block;
     font-size: 2rem;
   }
@@ -224,16 +224,13 @@
 
   .evaluation-form {
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     height: 7.5rem;
     justify-content: flex-start;
   }
 
-  .input-name,
-  .input-lastname,
-  .input-email {
-    border: 1px solid #ccc;
+  .input-name , .input-lastname , .input-email {
+    border: 1px solid rgb(204, 204, 204);
     border-radius: 4px;
     box-sizing: border-box;
     padding: 0.35rem;
@@ -251,7 +248,8 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and ( min-width : 1024px ) {
+
   .header {
     height: 5.5rem;
   }
@@ -260,8 +258,7 @@
     flex-direction: row;
   }
 
-  .trybewarts-login-email,
-  .trybewarts-login-senha {
+  .trybewarts-login-email , .trybewarts-login-senha {
     margin-right: 0.5rem;
   }
 
@@ -274,7 +271,7 @@
     width: 34rem;
   }
 
-  .input-name, .input-lastname , .input-email {
+  .input-name , .input-lastname , .input-email {
     width: 45%;
   }
 
@@ -283,7 +280,8 @@
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and ( min-width : 1300px ) {
+
   .content-wrapper {
     width: 675px;
   }
@@ -302,8 +300,7 @@
   }
 
   .learn-labels {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
   }
 
