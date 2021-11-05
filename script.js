@@ -62,7 +62,7 @@ submitButton.addEventListener('click', () => {
 
   console.log(familyOption);
 
-  console.log([...contentToLearn].filter((element) => element.checked));
+  console.log([...contentToLearn].filter((element) => element.checked).map(({ value }) => value));
 });
 
 console.log(contentToLearn);
